@@ -28,7 +28,7 @@ button.contained {
 }
 
 button.contained:hover {
-    @apply  border-white text-white bg-transparent;
+    @apply border-white text-white bg-transparent;
 }
 
 input {
@@ -41,15 +41,15 @@ input {
 
 .slider-bar {
     @apply w-full h-[8px] rounded-[8px] relative cursor-pointer;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .active-bar {
     @apply absolute bg-teal-600 rounded-l-[8px] h-[8px] cursor-pointer;
-    background: linear-gradient(90deg, rgba(255,92,1,1) 0%, rgba(255,210,95,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 92, 1, 1) 0%, rgba(255, 210, 95, 1) 100%);
 }
 
-.active-bullet{
+.active-bullet {
     @apply w-[25px] h-[25px] rounded-full relative cursor-pointer;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -77,10 +77,45 @@ input {
     font-size: 16px;
     line-height: 150%;
 }
+
 .slider-number div:first-child {
-    text-align: left;
+    @apply text-left;
 }
 
 .slider-number div:last-child {
-    text-align: right;
+    @apply text-right;
+}
+
+.navbar {
+    @apply p-4;
+    @apply md:w-[80px] md:bg-[#1B1B1B] md:h-screen;
+}
+
+.logo-container {
+    @apply flex h-[70px] items-center;
+    @apply md:justify-center md:h-[80px]
+}
+
+.menu-container {
+    @apply h-[70px] w-full flex justify-center gap-[35px] items-center fixed bottom-[0];
+    @apply md:flex-col md:relative md:gap-0 md:h-full md:justify-start md:gap-[30px];
+    background: rgba(24, 24, 24, 0.2);
+    box-shadow: inset 0px 0.5px 0px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(27.1828px);
+}
+
+.logo-icon {
+    @apply w-[35px] h-[15px] cursor-pointer
+}
+
+
+.nav-icon {
+    @apply cursor-pointer;
+    fill: gray;
+    height: 24px;
+    width: 24px;
+}
+
+.nav-icon.active {
+    fill: white;
 }
